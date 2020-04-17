@@ -27,14 +27,18 @@ class HexLattice:
         #    --
         st = (6 * N) * (2 * N) - N + 2 * N - 1
 
-        self.Nodes = []
-        self.Bars = []
+        self.Nodes = np.zeros((no, 2))
+        self.Bars = np.zeros((st, 2)).astype(int)
 
-        self.FocusNode =
+        self.FocusNode = no//2
+
+    def idx(k, l):
+        return k * 2 * N + k // 2 + l
 
     def build_lattice(self) -> None:
         pass
 
     def print_lattice(self) -> None:
         pass
+
 
