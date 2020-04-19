@@ -157,7 +157,7 @@ Ku = np.dot(np.dot(np.transpose(T), Kp), T)
 R = np.zeros((st*4, no*2))
 for i in range(0, st):
     R[i*4:i*4+2, St[i,0]*2:St[i,0]*2+2] = np.eye(2)
-    R[i*4+2:i*4+4, St[i,1]*2:St[i,1]*2+2] = np.zeros((2,2))
+    R[i*4+2:i*4+4, St[i,1]*2:St[i,1]*2+2] = np.eye(2)
     #R(i*4-3:i*4-2, St(i,1)*2-1:St(i,1)*2-0)=eye(2)
     #R(i*4-1:i*4-0, St(i,2)*2-1:St(i,2)*2-0)=eye(2)
 
@@ -185,7 +185,7 @@ sig_thr = RNG[0:st]
 r = np.zeros((2*st, 1))
 
 # Maximum stress condition for the loading process:
-sig_tot = 10.
+sig_tot = 1.
 
 # Stress steps for the loading process:
 delta_sig=0.05
